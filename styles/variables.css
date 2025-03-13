@@ -1,1 +1,69 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+
+:root {
+  --font-main: 'Inter-Variable', sans-serif;
+  --font-accent: 'PressStart2P', cursive;
+  --font-weight-text: 400;        /* Обычный текст */
+  --font-weight-title: 700;       /* Заголовки */
+
+  --bg-main-color: #fff;                  /* Главный цвет фона */
+  --text-color: rgb(0, 0, 0);             /* Главный цвет текста */ 
+  --outline-button-color: rgb(0, 0, 0);   /* Главный цвет обводки кнопки */
+
+  --title-size: clamp(3.0625rem, 2.4847rem + 2.4653vw, 4.0625rem); /* Резиновый заголовок в header'e */
+  --subtitle-size: clamp(0.875rem, 0.55rem + 1.3867vw, 1.4375rem); /* Резиновый подзаголовок в header'e*/
+
+  --h3-size: 18px;          /* Размер шрифта для заголовка карточки */
+  --font-button-size: 14px; /* Размер шрифта для кнопок и лейбла */
+
+  --body-margin-inline-start: clamp(0px, 26vw, 368px); /* Резиновый размер отступа слева для всего body */
+  --body-margin-inline-end: clamp(0px, 26vw, 370px);   /* Резиновый размер отступа справа для всего body */ 
+  --body-margin-block-start: 100px;                    /* Отступ для всего body, одинаковый на всех разрешениях */ 
+
+  --body-gap: 100px;
+  --header-logo-gap: 20px; 
+  --main-gap: 55px;
+  --section-list-gap: 50px;
+
+  --header-logo-padding-block: clamp(120px, 8.9vw, 128px);    /* Резиновые вертикальные внутр. отступы для header-logo*/
+  --header-logo-padding-inline: clamp(14px, 8.38vw, 120.5px); /* Резиновые горизонтальные внутр. отступы для header-logo */
+
+  --card-box-margin-inline: 25px; /* Внешние горизонтальные отступы для обертки описания */
+  --card-box-margin-block-start: 25px;  /* Внешний вертикальный отступ сверху для обертки описания */
+  --card-box-margin-block-end: 25px;    /* Внешний вертикальный отступ снизу для обертки описания */
+
+  --card-title-margin-inline-start: 10px; /* Внешний горизонтальный отступ слева для заголовка карточки */
+  --card-title-margin-block-start: 5px;   /* Внешний вертикальный отступ сверху для заголовка карточки */
+  --card-title-margin-block-end: 5px;     /* Внешний вертикальный отступ снизу для заголовка карточки */
+
+  --button-like-padding-inline: 37px; /* Внутренние горизонтальные отступы для кнопки лайка */
+  --button-like-padding-block: 11px;  /* Внутренние вертикальные отступы для кнопки лайка */
+
+  --button-icon-padding-inline-start: 19px; /* Внутренний горизонтальный отступ слева для кнопки лайка */
+  --button-icon-padding-inline-end: 21px;   /* Внутренний горизнотальный отступ справа для кнопки лайка */ 
+  --button-icon-padding-block: 15px;        /* Внутренние вертикальные отступы для кнопки дискеты */
+
+  --bg-stripe-color: #d3d3d3;       /* цвет 1-ого и 2-ого градиента */
+  --bg-gradient-start: #e7e7e7;     /* */
+  --bg-gradient-end: #1a1a1a;       /* */
+  --bg-image: repeating-linear-gradient(                 /* Градиент на весь body*/
+    90deg,
+      var(--bg-stripe-color) 0px,
+      var(--bg-stripe-color) 2px,
+      transparent 2px,
+      transparent 4px
+  ),
+  repeating-linear-gradient(
+    180deg,
+    var(--bg-stripe-color) 0px,
+    var(--bg-stripe-color) 2px,
+    transparent 2px,
+    transparent 4px
+  ),
+  linear-gradient(
+    to bottom,
+    var(--bg-gradient-start) 0.01%,
+    var(--bg-gradient-end) 100%
+  );
+  --outline-color: rgb(255, 255, 255, 0.5);  /* Обводка лейбла свойством text-stroke */ 
+}
