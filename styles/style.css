@@ -405,7 +405,7 @@ dialog::backdrop {
   .card__tape-button {                              /* Кнопка с дискетой после карточек */ 
     flex-direction: column;
     block-size: 80px;
-    inline-size: 306px;                        
+    inline-size: 306px;
   }
 
   .floppy__image {                                /* svg иконка на кнопке кассеты 'сохранить на память' */ 
