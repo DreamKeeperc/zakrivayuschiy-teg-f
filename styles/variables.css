@@ -8,7 +8,13 @@
 
   --bg-main-color: #fff;                  /* Главный цвет фона */
   --text-color: rgb(0, 0, 0);             /* Главный цвет текста */ 
-  --outline-button-color: rgb(0, 0, 0);   /* Главный цвет обводки кнопки */
+  --border-button-color: rgb(0, 0, 0);   /* Главный цвет обводки кнопки */
+  --svg-color: white;
+  --mix-blend-color: #fff;
+  --pseudo-button-color: rgb(0, 0, 0); 
+
+  --contour-color: rgb(0, 0, 0);              /* Цвет контура сердца */ 
+  --animation-fill-color: rgba(255, 0, 0, 1); /* Цвет внутренности сердца */ 
 
   --title-size: clamp(3.0625rem, 2.4847rem + 2.4653vw, 4.0625rem); /* Резиновый заголовок в header'e */
   --subtitle-size: clamp(0.875rem, 0.55rem + 1.3867vw, 1.4375rem); /* Резиновый подзаголовок в header'e*/
@@ -16,13 +22,13 @@
   --h3-size: 18px;          /* Размер шрифта для заголовка карточки */
   --font-button-size: 14px; /* Размер шрифта для кнопок и лейбла */
 
-  --body-margin-inline-start: clamp(0px, 26vw, 368px); /* Резиновый размер отступа слева для всего body */
+  --body-margin-inline-start: clamp(0px, 26vw, 370px); /* Резиновый размер отступа слева для всего body */
   --body-margin-inline-end: clamp(0px, 26vw, 370px);   /* Резиновый размер отступа справа для всего body */ 
   --body-margin-block-start: 100px;                    /* Отступ для всего body, одинаковый на всех разрешениях */ 
 
   --body-gap: 100px;
   --header-logo-gap: 20px; 
-  --main-gap: 55px;
+  --main-gap: 50px;
   --section-list-gap: 50px;
 
   --header-logo-padding-block: clamp(120px, 8.9vw, 128px);    /* Резиновые вертикальные внутр. отступы для header-logo*/
@@ -37,7 +43,7 @@
   --card-title-margin-block-end: 5px;     /* Внешний вертикальный отступ снизу для заголовка карточки */
 
   --button-like-padding-inline: 37px; /* Внутренние горизонтальные отступы для кнопки лайка */
-  --button-like-padding-block: 11px;  /* Внутренние вертикальные отступы для кнопки лайка */
+  --button-like-padding-block: 9px;  /* Внутренние вертикальные отступы для кнопки лайка */
 
   --button-icon-padding-inline-start: 19px; /* Внутренний горизонтальный отступ слева для кнопки лайка */
   --button-icon-padding-inline-end: 21px;   /* Внутренний горизнотальный отступ справа для кнопки лайка */ 
