@@ -185,14 +185,14 @@ li:nth-child(8) .card__image {                       /* Фильтры на ка
   line-height: 1.16;
 }
 
-.button__wrapper {                        /* Отдельная обертка для кнопок */ 
+.button__wrapper {                  /* Отдельная обертка для кнопок */ 
   display: flex;
   flex-direction: row;
   align-self: end;
   gap: 12px;
 }
 
-.card__icon-button {                      /* Кнопка сердечка */
+.card__icon-button {                     /* Кнопка сердечка */
   background-color: transparent;
   border: 2px solid transparent;
   cursor: pointer;
@@ -417,9 +417,3 @@ dialog::backdrop {
     margin-inline: 10px;
   }
 }
-
-
-
-
-
-
