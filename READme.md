@@ -2,4 +2,4 @@
 ---
 1. Последний этап верстки в Яндекс.Практикум.
 2. Освоение анимаций, переходов, декорирование в общем Красотищи.
-[Ссылка на работу](git@github.com:DreamKeeperc/zakrivayuschiy-teg-f.git)
+[Ссылка на работу](https://github.com/DreamKeeperc/zakrivayuschiy-teg-f.git)
