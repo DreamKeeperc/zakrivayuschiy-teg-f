@@ -2,7 +2,7 @@
 
 :root {
   --font-main: 'Inter-Variable', sans-serif;
-  --font-accent: 'PressStart2P', cursive;
+  --font-accent: 'PressStart2P', monospace;
   --font-weight-text: 400;        /* Обычный текст */
   --font-weight-title: 700;       /* Заголовки */
 
@@ -43,7 +43,7 @@
   --card-title-margin-block-end: 5px;     /* Внешний вертикальный отступ снизу для заголовка карточки */
 
   --button-like-padding-inline: 37px; /* Внутренние горизонтальные отступы для кнопки лайка */
-  --button-like-padding-block: 9px;  /* Внутренние вертикальные отступы для кнопки лайка */
+  --button-like-padding-block: 2px;  /* Внутренние вертикальные отступы для кнопки лайка */
 
   --button-icon-padding-inline-start: 19px; /* Внутренний горизонтальный отступ слева для кнопки лайка */
   --button-icon-padding-inline-end: 21px;   /* Внутренний горизнотальный отступ справа для кнопки лайка */ 

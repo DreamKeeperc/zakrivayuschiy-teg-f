@@ -78,35 +78,35 @@
   background-color: var(--bg-main-color);
 }
 
-li:first-child .card__image {                   /* Фильтры на картинки */
+.filter-brightness {                   /* Фильтры на картинки */
   filter: brightness(150%);
 }
 
-li:nth-child(2) .card__image {
+.filter-contrast {
   filter: contrast(200%);
 }
 
-li:nth-child(3) .card__image {
+.filter-sepia {
   filter: sepia(200%);
 }
 
-li:nth-child(4) .card__image {
+.filter-opacity {
   filter: opacity(0.8);
 }
 
-li:nth-child(5) .card__image {
+.filter-saturate {
   filter: saturate(200%);
 }
 
-li:nth-child(6) .card__image {
+.filter-hue-rotate {
   filter: hue-rotate(90deg);
 }
 
-li:nth-child(7) .card__image {
+.filter-brightness-contrast-sepia  {
   filter: brightness(150%) contrast(90%) sepia(150%);
 }
 
-li:nth-child(8) .card__image {                       /* Фильтры на картинки */
+.filter-invert {                       /* Фильтры на картинки */
   filter: invert(0.8);
 }
 
@@ -137,6 +137,7 @@ li:nth-child(8) .card__image {                       /* Фильтры на ка
   inline-size: 100%;
   block-size: 100%;
   object-fit: cover;
+  object-position: center;
 }
 
 .card__image-label {                    /* Обертка для фотографии и лейбла */ 
@@ -166,7 +167,7 @@ li:nth-child(8) .card__image {                       /* Фильтры на ка
 .card__box {                         /* Обертка для текста и кнопок */ 
   display: flex;
   flex-direction: column;
-  gap: 28px;
+  gap: 25px;
   margin-inline: var(--card-box-margin-inline);
   margin-block-start: var(--card-box-margin-block-start);
   margin-block-end: var(--card-box-margin-block-end);
@@ -182,124 +183,29 @@ li:nth-child(8) .card__image {                       /* Фильтры на ка
   font-family: inherit;
   font-variation-settings: 'wght' var(--font-weight-text);
   font-size: var(--h3-size);
-  line-height: 1.16;
+  line-height: 1.163;
 }
 
 .button__wrapper {                  /* Отдельная обертка для кнопок */ 
   display: flex;
   flex-direction: row;
   align-self: end;
-  gap: 12px;
+  gap: 6px;
 }
 
 .card__icon-button {                     /* Кнопка сердечка */
   background-color: transparent;
   border: 2px solid transparent;
   cursor: pointer;
+  block-size: 38px;
 }
-
-.card__icon-button .core {
-  transition: fill 0.3s linear;
-  fill: transparent;
-}
-
-.card__icon-button:hover .core {
-  fill: var(--contour-color);
-}
-
-.card__icon-button:active .core {
-  fill: var(--animation-fill-color);
-}
-
-.card__icon-button:not(:hover) .core {
-  transition-delay: 0.03s;
-}
-
-.card__icon-button .main-body {
-  transition: fill 0.5s linear 0.05s;
-  fill: transparent;
-}
-
-.card__icon-button:hover .main-body {
-  fill: var(--contour-color);
-}
-
-.card__icon-button:active .main-body {
-  fill: var(--animation-fill-color);
-}
-
-.card__icon-button:not(:hover) .main-body {
-  transition: fill 0.3s;
-}
-
-.card__icon-button:focus {
-  outline: none;
-}
-
-.card__icon-button:focus-visible {
-  border-color: var(--border-button-color);
-}
-
-.sparks {
-  opacity: 0;
-}
-
-.like-icon.is-liked .core {               /* Сердцевина при клике перекрашивается 0.3s*/ 
-  transition: fill 0.3s linear;
-  fill: var(--animation-fill-color);
-}                                            
-
-.like-icon.is-liked .main-body {    /* Основная часть сердца при клике перекрашивается 0.3s с задержкой 0.05s */
-  transition: fill 0.3s linear 0.05s;
-  fill: var(--animation-fill-color);
-}
-
-.like-icon.is-liked .contour {  /* Контур при клике перекрашивается 0.3s с задержкой 0.06s */
-  transition: fill 0.3s linear 0.06s;
-  fill: var(--animation-fill-color);
-}
-
-@keyframes hearts {
-  from {
-    scale: 1;
-  }
-
-  to {
-    scale: 1.25;
-  }
-}
-
-@keyframes sparks { 
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-.like-icon.is-liked .heart {
-  animation: hearts 0.3s ease-in 0.1s 1 backwards;
-  transform-origin: center;
-}
-
-.like-icon.is-liked .sparks {
-  animation: sparks 0.3s ease-in 0.3s 1 backwards;
-}
-
-.like-icon:not(.is-liked) .contour {
-  fill: var(--contour-color);
-  transition: fill 0.1s linear;
-}
-
 
 .card__like-button {                        /* Кнопка с надписью лайк */ 
   border: 2px solid var(--border-button-color);
   position: relative;
   overflow: hidden;
-  inline-size: 130px;
   block-size: 38px;
+  inline-size: 130px;
 }
 
 .card__like-button:focus, .card__tape-button:focus {
@@ -329,7 +235,7 @@ li:nth-child(8) .card__image {                       /* Фильтры на ка
   position: relative;
 }
 
-.card__tape-button::before, .card__like-button::before {
+button:not(.card__close-button)::before {
   content: '';
   position: absolute;
   top: 0;
@@ -342,7 +248,7 @@ li:nth-child(8) .card__image {                       /* Фильтры на ка
   transition: transform 0.5s ease-in-out;
 }
 
-.card__tape-button:hover::before, .card__like-button:hover::before {
+button:not(.card__close-button):hover::before {
   transform: scaleX(1);
 }
 
@@ -360,8 +266,9 @@ dialog[open] {                                     /* Модальное окн�
   display: flex;
   flex-direction: column;
   gap: 30px;
-  block-size: 191px;
   inline-size: 353px;
+  margin-block-end: 390px;
+  padding-block-start: 25px;
 }
 
 .dialog__wrapper {                          /* Обертка для контента внутри модального окна */ 
@@ -404,16 +311,39 @@ dialog::backdrop {
 @media (max-width: 376px) {                     /* медиазапрос для разрешений меньше или равно 375px */
   .card__tape-button {                              /* Кнопка с дискетой после карточек */ 
     flex-direction: column;
-    block-size: 80px;
     inline-size: 306px;
+    block-size: 86px;
   }
 
   .floppy__image {                                /* svg иконка на кнопке кассеты 'сохранить на память' */ 
-    inline-size: 24px;
-    block-size: 24px;
+    inline-size: 28px;
+    block-size: 28px;
   }
 
   .card__title {
     margin-inline: 10px;
   }
+
+  .card__image-label {                    /* Обертка для фотографии и лейбла */ 
+    top: 24px;
+    right: 12px;
+  }
+
+  .card__box {                         /* Обертка для текста и кнопок */ 
+    margin-inline-end: 26px;
+  }
+
+  .card__like-button {                        /* Кнопка с надписью лайк */ 
+   padding-top: 2px;
+  }
+
+  dialog[open] {                                     /* Модальное окно */ 
+    margin-block-end: 240px;
+    padding-block-start: 35px;
+  }
+
+  .dialog__wrapper {                          /* Обертка для контента внутри модального окна */ 
+    justify-content: end;
+  }
+
 }
