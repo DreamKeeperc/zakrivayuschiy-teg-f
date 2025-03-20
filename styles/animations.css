@@ -31,22 +31,23 @@
 }
 
 .card__icon-button .core {
-  transition: fill 0.3s linear;  /* При наведении без задержки */
+  transition: fill 0.3s linear 0.03s;  
   fill: transparent;
 }
 
 .card__icon-button:hover .core {
   fill: var(--contour-color);
-  transition-delay: 0.03s;
+  transition-delay: 0s;
 }
 
 .card__icon-button .main-body {
-  transition: fill 0.3s linear 0.05s;  /* Задержка 0.05s при наведении */
+  transition: fill 0.3s linear; 
   fill: transparent;
 }
 
 .card__icon-button:hover .main-body {
   fill: var(--contour-color);
+  transition-delay: 0.05s;
 }
 
 .card__icon-button:active .core {
@@ -56,6 +57,7 @@
 
 .card__icon-button:active .main-body {
   fill: var(--animation-fill-color);
+  transition-delay: 0.05s;
 }
 
 .card__icon-button:focus {

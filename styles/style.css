@@ -208,13 +208,20 @@
   inline-size: 130px;
 }
 
-.card__like-button:focus, .card__tape-button:focus {
+button {
+  transition: box-shadow 0.3s ease;
+}
+
+.card__like-button .button__text {
+  padding-block-start: 4px;
+}
+
+button:focus {
   outline: none;
 }
 
-.card__like-button:focus-visible, .card__tape-button:focus-visible {
+button:not(.card__icon-button):focus-visible {
   box-shadow: 2px 2px 0px var(--text-color);
-  transition: box-shadow 0.3s ease;
 }
 
 .box-tape {                               /* обертка для кнопки */ 
@@ -225,14 +232,15 @@
 .card__tape-button {                      /* Кнопка с дискетой после карточек */ 
   display: flex;
   flex-direction: row;                        
-  block-size: 50px;
-  inline-size: 332px;
+  block-size: 55px;
+  inline-size: 339px;
   background-color: var(--bg-main-color);
   justify-content: center;
   align-items: center;
   border: 2px solid var(--border-button-color);
   gap: 8px;
   position: relative;
+  padding-block-start: 3px;
 }
 
 button:not(.card__close-button)::before {
@@ -266,9 +274,8 @@ dialog[open] {                                     /* Модальное окн�
   display: flex;
   flex-direction: column;
   gap: 30px;
-  inline-size: 353px;
-  margin-block-end: 390px;
-  padding-block-start: 25px;
+  margin-block-end: 384.5px;
+  padding: 30px;
 }
 
 .dialog__wrapper {                          /* Обертка для контента внутри модального окна */ 
@@ -291,7 +298,7 @@ dialog::backdrop {
 
 .card__close-button {                             /* Кнопка закрытия 'Ок' */
   border: 2px solid var(--border-button-color);
-  padding-block: 12px;
+  block-size: 38px;
 }
 
 .floppy__image {                                /* svg иконка на кнопке кассеты 'сохранить на память' */ 
@@ -304,24 +311,25 @@ dialog::backdrop {
 
 .tape__image {                            /* svg иконка увеличенной кассеты внутри модального окна */
   align-self: center;
-  block-size: 39px;
   inline-size: 39px;
+  block-size: 39px;
+}
+
+.svg-box {
+  align-self: center;
+  block-size: 39px;
 }
 
 @media (max-width: 376px) {                     /* медиазапрос для разрешений меньше или равно 375px */
   .card__tape-button {                              /* Кнопка с дискетой после карточек */ 
     flex-direction: column;
     inline-size: 306px;
-    block-size: 86px;
+    block-size: 84px;
   }
 
   .floppy__image {                                /* svg иконка на кнопке кассеты 'сохранить на память' */ 
     inline-size: 28px;
     block-size: 28px;
-  }
-
-  .card__title {
-    margin-inline: 10px;
   }
 
   .card__image-label {                    /* Обертка для фотографии и лейбла */ 
@@ -333,17 +341,8 @@ dialog::backdrop {
     margin-inline-end: 26px;
   }
 
-  .card__like-button {                        /* Кнопка с надписью лайк */ 
-   padding-top: 2px;
-  }
-
   dialog[open] {                                     /* Модальное окно */ 
-    margin-block-end: 240px;
-    padding-block-start: 35px;
+    margin-block-end: 238px;
+    padding: 30px 38px;
   }
-
-  .dialog__wrapper {                          /* Обертка для контента внутри модального окна */ 
-    justify-content: end;
-  }
-
 }
