@@ -272,10 +272,12 @@ button:not(.card__close-button):hover::before {
 
 dialog[open] {                                     /* Модальное окно */ 
   display: flex;
+  position: fixed;
   flex-direction: column;
   gap: 30px;
-  margin-block-end: 384.5px;
   padding: 30px;
+  justify-content: center;
+  align-items: center;
 }
 
 .dialog__wrapper {                          /* Обертка для контента внутри модального окна */ 
@@ -286,9 +288,8 @@ dialog[open] {                                     /* Модальное окн�
 
 .dialog__wrapper .button__text {            /* Текст для контента внутри модального окна */ 
   text-transform: uppercase;
-  align-self: center;
+  line-height: 150%;
   max-inline-size: 234px;
-  line-height: 1.5;
 }
 
 dialog::backdrop {                       
@@ -299,6 +300,7 @@ dialog::backdrop {
 .card__close-button {                             /* Кнопка закрытия 'Ок' */
   border: 2px solid var(--border-button-color);
   block-size: 38px;
+  inline-size: 293px;
 }
 
 .floppy__image {                                /* svg иконка на кнопке кассеты 'сохранить на память' */ 
@@ -327,6 +329,10 @@ dialog::backdrop {
     block-size: 84px;
   }
 
+  .card__close-button {                             /* Кнопка закрытия 'Ок' */
+    inline-size: 257px;
+  }
+
   .floppy__image {                                /* svg иконка на кнопке кассеты 'сохранить на память' */ 
     inline-size: 28px;
     block-size: 28px;
@@ -341,8 +347,11 @@ dialog::backdrop {
     margin-inline-end: 26px;
   }
 
+  .dialog__wrapper {                          /* Обертка для контента внутри модального окна */ 
+    max-inline-size: 257px;
+  }
+
   dialog[open] {                                     /* Модальное окно */ 
-    margin-block-end: 238px;
-    padding: 30px 38px;
+    padding-inline: 36px;
   }
 }
